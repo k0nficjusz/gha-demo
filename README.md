@@ -26,7 +26,10 @@ Issue created (event) -> Sort (action) -> Label created (action) -> Assign it (a
 
 ```mermaid
 flowchart LR
-    Commit code --> Test --> Build --> Push --> Deploy
+    Commit code --> Test;
+    Test --> Build;
+    Build --> Push;
+    Push --> Deploy
 ```
 
 Just another CI/CD tool?
