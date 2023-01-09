@@ -29,7 +29,7 @@ flowchart LR
     Commit code --> Test;
     Test --> Build;
     Build --> Push;
-    Push --> Deploy
+    Push --> Deploy;
 ```
 
 Just another CI/CD tool?
