@@ -1,6 +1,6 @@
 # What is GitHub Actions?
 
-Platform to automate developer workflows. The CI/CD is only one of many workflows with we can automate with GitHub Actions. 
+Platform to automate developer workflows. The CI/CD is only one of many workflows with we can automate with [GitHub Actions](https://docs.github.com/en/actions "Github Action official Documentation).
 
 # What are those workflows?
 
@@ -41,6 +41,7 @@ Just another CI/CD tool?
 # DEMO:
  - Create repository
  - Actions - available workflows for reuse
+[build in actions repositories https://github.com/actions]
     - Deployment workflows templates
     - Continues integration workflows
     - Automate every process
