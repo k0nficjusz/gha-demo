@@ -1,11 +1,13 @@
-
-from src.main import Main
-
+"""Test for main class."""
 import unittest
 
+from src.main import Main # pylint: disable=import-error
 
-class my_hello_world_test_case(unittest.TestCase):
+
+class MessageTestCase(unittest.TestCase):
+    """Message test class."""
     def test_hello_world(self):
+        """Test for Main with hello world message."""
         main = Main()
         main.run()
         self.assertEqual(main.message, "Hello World")
