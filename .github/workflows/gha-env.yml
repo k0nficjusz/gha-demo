@@ -1,6 +1,8 @@
 name: Publish GitHub Actions Artifacts Example
 
-on: [ push ]
+on: 
+  pull_request:
+    types: [opened]
 
 jobs:
   github-actions-environment-variables-ubuntu:
