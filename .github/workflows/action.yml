@@ -1,0 +1,22 @@
+name: Just testing how to use env variables
+
+on:
+  push:
+    branches:
+      - feature/environment-usage
+  workflow_dispatch:
+
+jobs:
+  fun_with_variables:
+    runs-on: ubuntu-latest
+    env:
+      BASE_URL: https://mypage.com
+      SUBPAGE: page_that_doesnt_exist
+      FULL_LINK: $BASE_URL/$SUBPAGE
+
+    steps:
+      - name: print variables
+        run: >-
+          echo $BASE_URL
+          echo $SUBPAGE
+          echo $FULL_LINK
