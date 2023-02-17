@@ -17,6 +17,6 @@ jobs:
     steps:
       - name: print variables
         run: >-
-          echo $BASE_URL
-          echo $SUBPAGE
+          echo $BASE_URL &&
+          echo $SUBPAGE &&
           echo $FULL_LINK
