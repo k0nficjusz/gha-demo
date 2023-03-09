@@ -32,3 +32,6 @@ jobs:
         with:
           name: json_file
           path: C:\*.json
+      - name: echo PROJECT_PATH
+        run: |
+          echo ${{ env.PROJECT_ROOT }}
