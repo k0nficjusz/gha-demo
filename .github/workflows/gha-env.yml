@@ -16,6 +16,9 @@ jobs:
     steps:
       - name: Ubuntu GitHub Actions environment variables List
         run: env
+      - name: Get items
+        run: |
+          Get-ChildItem -Path 'C:\'
 
   github-actions-environment-variables-macos:
     runs-on: macos-latest
