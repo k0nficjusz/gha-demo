@@ -39,14 +39,13 @@ jobs:
       - name: Set GITHUB_OUTPUT
         id: gh-output
         run: echo "SELECTED_COLOR=green" >> $GITHUB_OUTPUT
-      - name: Get color
-        run: echo "The selected color is ${{ steps.gh-output.outputs.SELECTED_COLOR }}"
-        
+      - name: Get GITHUB_OUTPUT
+        run: echo "The value of SELECTED_COLOR ${{ steps.gh-output.outputs.SELECTED_COLOR }}"
       
       - name: tests
         run: echo "test msg" >> c:\test.txt
       - name: Set GITHUB_ENV
         run: |
-          echo "NEW_VAR=$(Get-Content c:\test.txt)" >> $GITHUB_ENV
+          echo "NEW_VAR=$(Get-Content c:\test.txt)" >> ${env.GITHUB_ENV}
           echo ${{ env.NEW_VAR }}
         
