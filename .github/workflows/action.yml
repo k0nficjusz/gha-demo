@@ -20,3 +20,10 @@ jobs:
           echo $BASE_URL &&
           echo $SUBPAGE &&
           echo $FULL_LINK
+          
+  widows_path:
+    runs-on: windows-latest
+    steps:
+      - name: path
+        run: |
+          Get-ChildItem -Path 'C:\'
