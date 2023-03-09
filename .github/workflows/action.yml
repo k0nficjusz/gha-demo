@@ -34,4 +34,4 @@ jobs:
           path: C:\*.json
       - name: echo PROJECT_PATH
         run: |
-          echo ${{ env.PROJECT_ROOT }}
+          Write-Host ${{ env.PROJECT_ROOT }}
