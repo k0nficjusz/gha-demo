@@ -1,4 +1,6 @@
 """Demo module."""
+import os
+
 class Main:
     '''Define simple message'''
 
@@ -11,7 +13,8 @@ class Main:
 
     def hello_world(self):
         """Define message function."""
-        self.message = "Hello World"
+        self.message = os.getenv('GITHUB_SHA')
+        
 
 if __name__ == "__main__":
     Main().run()
