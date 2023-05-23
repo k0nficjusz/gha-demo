@@ -1,0 +1,25 @@
+name: Get Modified Files
+
+on:
+  push:
+
+jobs:
+  get-modified-files:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Get modified files
+        run: |
+          git diff --name-only > modified_files.txt
+
+      - name: Process modified files
+        run: |
+          while IFS= read -r file; do
+            # Perform actions on each modified file
+            echo "Processing $file"
+            # Add your desired actions here
+          done < modified_files.txt
+          
