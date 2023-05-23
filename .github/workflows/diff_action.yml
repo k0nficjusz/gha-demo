@@ -15,14 +15,9 @@ jobs:
 
       - name: Get modified files
         run: |
-          echo "git diff --name-only"
+          echo $(git diff --name-only)
           git diff --name-only > modified_files.txt
         
-      - name: Debug
-        run: |
-          echo "Modified files:"
-          cat modified_files.txt
-
       - name: Process modified files
         run: |
           while IFS= read -r file; do
