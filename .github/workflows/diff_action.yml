@@ -15,6 +15,7 @@ jobs:
 
       - name: Get modified files
         run: |
+          echo "git diff --name-only"
           git diff --name-only > modified_files.txt
         
       - name: Debug
