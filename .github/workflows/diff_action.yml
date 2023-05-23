@@ -9,11 +9,16 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Get modified files
         run: |
           git diff --name-only > modified_files.txt
+        
+      - name: Debug
+        run: |
+          echo "Modified files:"
+          cat modified_files.txt
 
       - name: Process modified files
         run: |
@@ -22,4 +27,3 @@ jobs:
             echo "Processing $file"
             # Add your desired actions here
           done < modified_files.txt
-          
