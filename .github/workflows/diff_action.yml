@@ -2,6 +2,7 @@ name: Get Modified Files
 
 on:
   push:
+  pull_request:
 
 jobs:
   get-modified-files:
