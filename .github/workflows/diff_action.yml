@@ -13,9 +13,9 @@ jobs:
         with:
           fetch-depth: 2
       - name: get changed files
-        id: getfile
+        id: diff-files
         run: |
-          echo "::set-output name=files::$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} | xargs)"
+          echo "files=$(git diff --name-only HEAD~ HEAD)" >> "$GITHUB_OUTPUT"
       - name: echo output
         run: |
-          echo ${{ steps.getfile.outputs.files }}
+          echo ${{ steps.diff-files.outputs.files }}
