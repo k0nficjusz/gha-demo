@@ -48,4 +48,11 @@ jobs:
         run: |
           echo "NEW_VAR=$(Get-Content c:\test.txt)" >> ${env.GITHUB_ENV}
           echo ${{ env.NEW_VAR }}
+
+  gha_vars:
+    runs-on: windows-latest
+    steps:
+      - name: commit message
+        run: |
+          echo "${{ github.event.head_commit.message }}"
         
