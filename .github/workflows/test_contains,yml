@@ -1,0 +1,16 @@
+name: Test
+
+on:
+  workflow_dispatch:
+    inputs:
+      my_string:
+        type: string
+        required: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: test contains
+      if: !contains('test', inputs.my_string)
+      run: echo "it not contain test"
