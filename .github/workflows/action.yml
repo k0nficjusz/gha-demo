@@ -27,7 +27,7 @@ jobs:
       - name: path
         run: |
           Get-ChildItem -Path 'C:\'
-      - name: upload
+      - name: upload test
         uses: actions/upload-artifact@v3
         with:
           name: json_file
