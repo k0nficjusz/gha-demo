@@ -1,9 +1,10 @@
 name: Run on protected branches
 
 on:
-    push:
-      branches:
-        - ${{ github.ref_protected }}
+  push:
+    branches:
+      - '*'
+
 
 jobs:
   github-actions-environment-variables-ubuntu:
